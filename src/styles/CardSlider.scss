@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  .mobile-cards {
+    display: block;
+  }
+  .desktop-cards {
+    display: none;
+  }
+}
+
+@media (min-width: 1023px) {
+  .mobile-cards {
+    display: none;
+  }
+  .desktop-cards {
+    display: block;
+  }
+}

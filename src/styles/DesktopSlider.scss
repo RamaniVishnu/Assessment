@@ -1,0 +1,162 @@
+@import "./variables.scss";
+
+.card-slider {
+  padding: 3% 4%;
+
+  @media #{$mobile} {
+    padding: 0;
+  }
+  .chief-designation {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: brown;
+
+    @media #{$mobile} {
+      text-align: left;
+      margin-left: 5%;
+    }
+  }
+  .organization-goal {
+    text-align: center;
+    width: 64%;
+    padding: 1% 19%;
+
+    @media #{$mobile} {
+      text-align: left;
+      width: 85%;
+      padding: 0% 6%;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    padding: 0 2%;
+
+    .carousel {
+      display: flex;
+      width: 95%;
+      transition: transform 0.3s ease;
+      justify-content: space-evenly;
+      margin-top: 30px;
+    }
+
+    .carousel-card {
+      // flex: 0 0 calc(100% / 3);
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      transition: transform 0.3s ease;
+      width: 215px;
+      display: block;
+      height: 315px;
+      border: 0;
+
+      .card-details {
+        position: relative;
+        width: 285px;
+        height: 315px;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(240, 240, 240);
+        border: 0;
+
+        .person-name {
+          float: right;
+          text-align: center;
+          width: 70px;
+          margin-top: 22px;
+          margin-left: 50%;
+
+          h2 {
+            margin-bottom: 0;
+            font-size: 22px;
+            color: brown;
+          }
+          .designation {
+            width: 120px;
+            margin-top: 0;
+            text-align: left;
+          }
+        }
+
+        .person-info {
+          margin-top: 45px;
+          padding-left: 12px;
+          margin-left: 11px;
+          text-align: left;
+          border-left: 3px solid brown;
+          width: 200px;
+        }
+
+        img {
+          position: absolute;
+          border: 1px solid;
+          height: 125px;
+          position: absolute;
+          top: -9%;
+          width: 120px;
+          height: 172px;
+          left: 4%;
+          border: 0;
+        }
+      }
+
+      .card-details.active {
+        height: 330px;
+      }
+
+      &:nth-child(n + 4) {
+        display: none; /* Hide cards 4, 5, 6 by default */
+      }
+    }
+
+    .carousel-card.active {
+      width: 250px;
+      height: 330px;
+      transform: scale(1.1); /* Scaled effect for active card */
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+
+      .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+
+        &.active {
+          background-color: brown;
+        }
+      }
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 60px;
+      color: brown;
+
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+    }
+  }
+}

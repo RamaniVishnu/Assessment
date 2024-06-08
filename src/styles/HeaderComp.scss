@@ -1,0 +1,105 @@
+@import "./variables.scss";
+
+.video-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 500px;
+
+  @media #{$mobile} {
+    background-image: url(/src/assets/image-07.png);
+    height: 300px;
+    background-size: 100% 88%;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    font-family: "Arial";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.5
+    ); // Semi-transparent white overlay
+    display: flex;
+    flex-direction: column;
+    //   align-items: center;
+    //   justify-content: center;
+    color: white;
+
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      transform: translate(32%, 27%);
+      width: 50%;
+
+      @media #{$mobile} {
+        transform: translate(18%, 50%);
+      }
+
+      h1 {
+        font-family: ui-sans-serif;
+        margin-bottom: 4.3%;
+        margin-top: 9.5%;
+        font-size: 68px;
+        color: black;
+
+        @media #{$mobile} {
+          font-size: 23px;
+        }
+      }
+      .btn-one {
+        background-color: white;
+        border-radius: 2px;
+        width: 173px;
+        height: 40px;
+        color: #8b0000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 18px;
+
+        @media #{$mobile} {
+          width: 120px;
+          padding: 7px 16px;
+        }
+      }
+
+      .brn-two {
+        background-color: #8b0000;
+        border-radius: 2px;
+        width: 173px;
+        height: 40px;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+
+        @media #{$mobile} {
+          display: none;
+        }
+      }
+    }
+  }
+}

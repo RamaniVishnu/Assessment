@@ -1,0 +1,88 @@
+.mobile-cards {
+  .carousel-card {
+    margin: 14% 4%;
+    .card-details {
+      position: relative;
+      width: 285px;
+      height: 315px;
+      background-color: rgb(240, 240, 240);
+      border: 0;
+      display: flex;
+      flex-direction: column;
+
+      .person-name {
+        width: 70px;
+        margin-left: 50%;
+        margin-top: -18%;
+
+        h2 {
+          margin-bottom: 0;
+          font-size: 22px;
+          color: brown;
+          padding-top: 92%;
+        }
+        .designation {
+          width: 120px;
+          margin-top: 0;
+          text-align: left;
+        }
+      }
+
+      .person-info {
+        padding-left: 12px;
+        margin-left: 17px;
+        text-align: left;
+        border-left: 3px solid brown;
+        width: 200px;
+        margin-top: 23%;
+      }
+
+      img {
+        position: absolute;
+        top: -9%;
+        width: 120px;
+        height: 172px;
+        left: 4%;
+        border: 0;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+
+      .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 7% 5px;
+        cursor: pointer;
+
+        &.active {
+          background-color: brown;
+        }
+      }
+    }
+
+    .prev,
+    .next {
+      background-color: white;
+      width: 40px;
+      border: 0;
+      margin: auto;
+      height: 45px;
+      font-size: 41px;
+      color: brown;
+
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+    }
+  }
+}

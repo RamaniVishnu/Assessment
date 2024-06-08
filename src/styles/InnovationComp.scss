@@ -1,0 +1,83 @@
+@import "./variables.scss";
+
+@media (max-width: 768px) {
+  .desktop-box {
+    display: none;
+  }
+}
+
+@media (min-width: 1023px) {
+  .mobile-cards {
+    display: none;
+  }
+  .desktop-cards {
+    display: block;
+  }
+}
+.innovation-container {
+  padding: 3% 4%;
+  background-color: whitesmoke;
+  position: relative;
+  .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: brown;
+
+    @media #{$mobile} {
+      text-align: left;
+      margin-left: 5%;
+      font-size: 22px;
+    }
+  }
+  .about {
+    text-align: center;
+    width: 64%;
+    padding: 1% 19%;
+
+    @media #{$mobile} {
+      text-align: left;
+      width: 85%;
+      padding: 0% 6%;
+    }
+  }
+
+  .image-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+
+    @media #{$desktop-and-up} {
+      display: none;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .explore-button {
+    display: flex;
+    justify-content: center;
+
+    @media #{$mobile} {
+      align-items: flex-end;
+      margin: 5%;
+    }
+
+    .explore-btn {
+      height: 35px;
+      width: 25%;
+      color: grey;
+      font-size: 18px;
+      border: 1px solid black;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+    }
+  }
+}
