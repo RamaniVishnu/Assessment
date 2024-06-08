@@ -2,7 +2,6 @@ import React from "react";
 import DesktopSlider from "./DesktopSlider";
 import MobileSlider from "./MobileSlider";
 import "/src/styles/CardSlider.scss";
-import "/src/styles/MobileSlides.scss";
 
 function CardSlider() {
   return (
