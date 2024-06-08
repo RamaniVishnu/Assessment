@@ -8,14 +8,30 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import "/src/styles.scss";
+// import "/src/styles.scss";
+import "../styles.scss"
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import image1 from "../assets/image-01.jpg";
+import image2 from "../assets/image-02.jpg";
+import image3 from "../assets/image-03.jpg";
+import image4 from "../assets/image-04.jpg";
+import image5 from "../assets/image-05.jpg";
+import image6 from "../assets/image-06.jpg";
+import image7 from "../assets/image-07.png";
 
 export default function LightBox({ displayImages, setDisplayImages }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+  const [cards] = useState([
+    { image: image1 },
+    { image: image2 },
+    { image: image3 },
+    { image: image4 },
+    { image: image5 },
+    { image: image6 },
+    { image: image7 },
+  ]);
   return (
     <div
       style={{
@@ -61,27 +77,11 @@ export default function LightBox({ displayImages, setDisplayImages }) {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper2"
         >
-          <SwiperSlide>
-            <img src="/src/assets/image-01.jpg" />
+          {cards.map((card,index)=>(
+            <SwiperSlide>
+            <img src={card.image} alt="images..." />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-02.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-03.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-04.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-05.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-06.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-07.png" />
-          </SwiperSlide>
+          ))}
         </Swiper>
         <Swiper
           loop={false}
@@ -92,27 +92,11 @@ export default function LightBox({ displayImages, setDisplayImages }) {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img src="/src/assets/image-01.jpg" />
+           {cards.map((card,index)=>(
+            <SwiperSlide>
+            <img src={card.image} alt="images..." />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-02.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-03.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-04.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-05.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-06.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/src/assets/image-07.png" />
-          </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

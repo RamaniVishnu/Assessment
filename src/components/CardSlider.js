@@ -1,7 +1,7 @@
 import React from "react";
 import DesktopSlider from "./DesktopSlider";
 import MobileSlider from "./MobileSlider";
-import "/src/styles/CardSlider.scss";
+import "./../assets/styles/CardSlider.scss"
 
 function CardSlider() {
   return (
@@ -11,7 +11,7 @@ function CardSlider() {
         <p className="organization-goal">
           We make a difference beyond our own business and those of our clients,
           ensuring our actions and what we do together, empower people and
-          communities to achieve more and live better lives.{" "}
+          communities to achieve more and live better lives.
         </p>
         <div className="mobile-cards">
           <MobileSlider />

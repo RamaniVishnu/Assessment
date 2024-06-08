@@ -1,22 +1,25 @@
 import React, { useState } from "react";
-import "/src/styles/CardSlider.scss";
+import "./../assets/styles/CardSlider.scss";
+import image1 from "../assets/300.jpeg";
+import image2 from "../assets/300 (1).jpeg";
+import image3 from "../assets/300 (10).jpeg";
 
 function MobileSlider() {
   const [cards] = useState([
     {
-      image: "/src/assets/300.jpeg",
+      image: image1,
       name: "John",
       index: 0,
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm. ",
     },
     {
-      image: "/src/assets/300 (1).jpeg",
+      image: image2,
       name: "Jessy",
       index: 1,
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm. ",
     },
     {
-      image: "/src/assets/300 (10).jpeg",
+      image: image3,
       name: "Kennedy",
       index: 2,
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm. ",

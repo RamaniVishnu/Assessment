@@ -1,38 +1,45 @@
 import React, { useState } from "react";
-import "/src/styles/DesktopSlider.scss"; // Assuming you have some SCSS for styling
+import "./../assets/styles/DesktopSlider.scss";
+import image1 from "../assets/300.jpeg";
+import image2 from "../assets/300 (1).jpeg";
+import image3 from "../assets/300 (10).jpeg";
+import image4 from "../assets/image-01.jpg";
+import image5 from "../assets/image-02.jpg";
+import image6 from "../assets/image-03.jpg";
+
+
 
 function DesktopSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showCards456, setShowCards456] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
-  const [cards, setCards] = useState([
+  const [cards] = useState([
     {
-      image: "/src/assets/300.jpeg",
+      image: image1,
       name: "John",
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm. ",
     },
     {
-      image: "/src/assets/300 (1).jpeg",
+      image: image2,
       name: "Jessy",
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm.",
     },
     {
-      image: "/src/assets/300 (10).jpeg",
+      image: image3,
       name: "Kennedy",
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm.",
     },
     {
-      image: "/src/assets/image-01.jpg",
+      image: image4,
       name: "lusy",
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm.",
     },
     {
-      image: "/src/assets/image-02.jpg",
+      image: image5,
       name: "daisy",
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm.",
     },
     {
-      image: "/src/assets/image-03.jpg",
+      image: image6,
       name: "Albert",
       bio: "is the Chief Executive Officer and Managing Director, a leading global IT solutions and consulting firm.",
     },
@@ -48,7 +55,6 @@ function DesktopSlider() {
     if (activeIndex > 1) {
       setShowCards456(true);
     }
-    setClickCount((prevCount) => prevCount + 1);
     setActiveIndex((prevIndex) => prevIndex + 1);
   };
 

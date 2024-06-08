@@ -1,11 +1,13 @@
 import React from "react";
-import "/src/styles/HeaderComp.scss";
+import "./../assets/styles/HeaderComp.scss";
+import backgroundVideo from "../assets/video_01.mp4";
+import image7 from "../assets/image-07.png";
 
 function HeaderComp() {
   return (
     <div>
-      <div className="video-container">
-        <video src="/src/assets/video_01.mp4" autoPlay muted />
+      <div className="video-container" style={{ backgroundImage: `url(${image7})` }}>
+        <video src={backgroundVideo} autoPlay muted />
         <div className="overlay">
           <div className="overlay-content">
             <h1>

@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import LightBox from "./LightBox";
 import GallerySlider from "./GallerySlider";
-import "/src/styles/InnovationComp.scss";
+import "../assets/styles/InnovationComp.scss";
+import image1 from "../assets/image-01.jpg";
+import image2 from "../assets/image-02.jpg";
+import image3 from "../assets/image-03.jpg";
+import image4 from "../assets/image-04.jpg";
+import image5 from "../assets/image-05.jpg";
+import image6 from "../assets/image-06.jpg";
+import image7 from "../assets/image-07.png";
 
 function InnovationComp({ displayImages, setDisplayImages }) {
   const [cards] = useState([
-    { image: "/src/assets/image-01.jpg" },
-    { image: "/src/assets/image-02.jpg" },
-    { image: "/src/assets/image-03.jpg" },
-    { image: "/src/assets/image-04.jpg" },
-    { image: "/src/assets/image-05.jpg" },
-    { image: "/src/assets/image-06.jpg" },
-    { image: "/src/assets/image-07.png" },
+    { image: image1 },
+    { image: image2 },
+    { image: image3 },
+    { image: image4 },
+    { image: image5 },
+    { image: image6 },
+    { image: image7 },
   ]);
 
   return (
@@ -37,6 +44,11 @@ function InnovationComp({ displayImages, setDisplayImages }) {
           <GallerySlider />
         </div>
         <div className="explore-button">
+        <button
+            className="explore-btn-mobile"
+          >
+            Explore now {">"}
+          </button>
           <button
             className="explore-btn"
             onClick={() => {

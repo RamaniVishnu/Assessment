@@ -68,6 +68,19 @@
       margin: 5%;
     }
 
+    .explore-btn-mobile{
+
+      @media #{$desktop-and-up}{
+        display: none;
+      }
+      height: 35px;
+      width: 25%;
+      color: grey;
+      font-size: 18px;
+      border: 1px solid black;
+      width: 100%;
+    }
+
     .explore-btn {
       height: 35px;
       width: 25%;
@@ -76,7 +89,7 @@
       border: 1px solid black;
 
       @media #{$mobile} {
-        width: 100%;
+        display: none;
       }
     }
   }
