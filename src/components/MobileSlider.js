@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/src/styles/MobileSlider.scss";
+import "/src/styles/MobileSlides.scss";
 
 function MobileSlider() {
   const [cards] = useState([
